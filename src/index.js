@@ -1,17 +1,13 @@
+//importamos express
 import express from "express";
+//importamos la ruta
+import urlRutas from "./routes/rutas";
 
 //declaramos app
 const app = express();
 
-//declaramos una ruta
-app.get("/", function(req, res){
-    return res.send({mensaje: "Bienvenido a node js"});
-});
-
-//para el saludo
-app.get("/saludo", function(req, res){
-    return res.json({mensaje: "Saludos desde DEVS rodrigo"});
-});
+//aqui para la ruta base
+app.use("/api/v1", urlRutas);
 
 //aqui vamos a escuchar el puerto iniciar el servidor
 app.listen(3000, function(){
