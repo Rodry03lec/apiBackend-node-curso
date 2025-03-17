@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15  # Usar la imagen oficial de PostgreSQL 15
+    container_name: postgres_5432_proyecto  # Nombre del contenedor
+    environment:
+      POSTGRES_USER: rodrigo  # Usuario de la base de datos
+      POSTGRES_PASSWORD: rodry  # Contraseña del usuario
+      POSTGRES_DB: db_node  # Nombre de la base de datos que se creará al iniciar
+    ports:
+      - "5432:5432"  # Mapear el puerto 5432 del contenedor al puerto 5432 del host
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Volumen para persistir los datos de la base de datos
+    networks:
+      - postgres_network  # Red para conectar este servicio con otros (opcional)
+
+volumes:
+  postgres_data:  # Definir un volumen para persistir los datos de PostgreSQL
+
+networks:
+  postgres_network:  # Definir una red personalizada (opcional)
