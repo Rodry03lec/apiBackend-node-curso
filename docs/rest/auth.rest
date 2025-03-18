@@ -1,8 +1,21 @@
 POST http://127.0.0.1:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
 
 
 ### Registro
 POST http://127.0.0.1:3000/api/v1/auth/registrar
+Content-Type: application/json
+
+{
+    "nombre": "admin",
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
 
 ### Perfil
 GET http://127.0.0.1:3000/api/v1/auth/perfil

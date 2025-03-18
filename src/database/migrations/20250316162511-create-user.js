@@ -10,17 +10,21 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING(50)
+        allowNull:false,
+        type: Sequelize.STRING(50),
       },
       email: {
-        type: Sequelize.STRING(250)
+        allowNull:false,
+        type: Sequelize.STRING(250),
+        unique: true
       },
       password: {
-        type: Sequelize.STRING(200)
+        allowNull:false,
+        type: Sequelize.STRING(200),
       },
       estado:{
+        
         type: Sequelize.BOOLEAN,
-        allowNull:true,
         defaultValue:true
       },
       createdAt: {

@@ -23,7 +23,9 @@
     "sequelize-cli": "^6.6.2"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.13.0",
     "pg": "^8.14.0",
     "pg-hstore": "^2.3.4",

@@ -6,6 +6,9 @@ import urlRutas from "./routes/rutas";
 //declaramos app
 const app = express();
 
+//para aceptar peticiones en formato JSON (req.body) : antes de las rutas
+app.use(express.json());
+
 //aqui para la ruta base
 app.use("/api/v1", urlRutas);
 
